@@ -27,7 +27,6 @@ To set up and run this project locally, follow these steps:
     ```bash
     python -m venv .med
     .med\Scripts\activate   # On Windows
-    # source .med/bin/activate # On macOS/Linux
     ```
 
 3.  **Install dependencies:**
