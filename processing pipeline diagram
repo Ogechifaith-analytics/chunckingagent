@@ -1,0 +1,42 @@
+
+    A[Raw Medical Documents] --> B(Azure Blob Storage: rawdocument container);
+
+    B --> C{Trigger: New Document Upload};
+
+    C --> D[Azure Document Intelligence];
+    D -- Extract Text & Structure --> E[Extracted Text & Layout Data];
+
+    E --> F[Azure Language Service];
+    F -- Perform Entity Recognition --> G[Recognized Medical Entities];
+
+    E & G --> H[Text Chunking Module];
+    H -- RecursiveCharacterTextSplitter --> I[Text Chunks with Metadata];
+
+    I --> J(Azure Blob Storage: processed-text-metadata container);
+    J --> K[Processed Medical Data (JSON Files)];
+
+    K -- Further Processing / Analysis --> L(Downstream AI Applications / UI);
+
+    subgraph Inputs
+        B
+    end
+
+    subgraph Processing Flow
+        D
+        E
+        F
+        G
+        H
+        I
+    end
+
+    subgraph Outputs
+        J
+        K
+    end
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px;
+    style J fill:#f9f,stroke:#333,stroke-width:2px;
+    style D fill:#bbf,stroke:#333,stroke-width:2px;
+    style F fill:#bbf,stroke:#333,stroke-width:2px;
+    style H fill:#bbf,stroke:#333,stroke-width:2px;
