@@ -11,6 +11,7 @@ This project provides a robust solution for processing medical documents. It aut
 * **Adaptive Text Chunking:** Breaks down large documents into manageable, semantically coherent chunks using `RecursiveCharacterTextSplitter` from `langchain-text-splitters`, making it suitable for retrieval-augmented generation (RAG) or further processing.
 * **Azure Blob Storage Integration:** Seamlessly reads raw documents from a specified input container and stores processed text and metadata in an output container.
 * **Secure Credential Handling:** Utilizes environment variables (`.env` file for local development) to keep sensitive API keys and connection strings out of the codebase.
+* **(Intended Integration) Azure AI Search:** The direct next step for this project is to ingest the processed JSON chunks into an Azure AI Search index. This enables powerful keyword, semantic, and vector search over the medical data, forming the basis for a robust RAG system.
 
 ## Installation
 
