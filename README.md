@@ -20,14 +20,14 @@ To set up and run this project locally, follow these steps:
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/Ogechifaith-analytics/chunckingagent.git](https://github.com/Ogechifaith-analytics/chunckingagent.git)
-    cd chunckingagent/med_processor
+    cd chunckingagent/medprocessor
     ```
 
 2.  **Create and activate a Python virtual environment:**
     It's highly recommended to use a virtual environment to manage dependencies.
     ```bash
     python -m venv .med
-    .med\Scripts\activate   # On Windows
+    .med\Scripts\activate 
     ```
 
 3.  **Install dependencies:**
@@ -36,7 +36,7 @@ To set up and run this project locally, follow these steps:
     ```
 
 4.  **Set up Environment Variables:**
-    Create a file named `.env` in the root of your `med_processor` directory (the same directory as `local_processor.py`). Populate it with your Azure service credentials:
+    Create a file named `.env` in the root of your `medprocessor` directory (the same directory as `local_processor.py`). Populate it with your Azure service credentials:
 
     ```env
     DOC_INTEL_ENDPOINT = os.getenv("AZURE_AI_DOCUMENT_INTELLIGENCE_ENDPOINT")
