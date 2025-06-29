@@ -155,8 +155,8 @@ def process_all_documents_in_container(): # Renamed for clarity
                 # 3. Chunk the extracted text
                 logging.info(f"Chunking extracted text for {blob_name}...")
                 text_splitter = RecursiveCharacterTextSplitter(
-                    chunk_size=1000,  # Max characters per chunk (adjust based on your LLM's context window)
-                    chunk_overlap=200, # Overlap to maintain context between chunks
+                    chunk_size=490,  # Max characters per chunk (adjust based on your LLM's context window)
+                    chunk_overlap=88, # Overlap to maintain context between chunks
                     length_function=len, # Use character length for simplicity
                     separators=[
                         "\n\n\n", # Triple newline for large breaks
